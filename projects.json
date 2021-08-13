@@ -1,0 +1,194 @@
+[
+    {
+        "id": 1,
+        "title": "Proyecto casa bosques con educacion y espacio de trabajo",
+        "customers": {
+            "id": 1,
+            "title": "Casa Bosques"
+        },
+        "topics": [
+            {
+                "id": 1,
+                "title": "Educacion"
+            },
+            {
+                "id": 4,
+                "title": "Espacio de trabajo"
+            }
+        ],
+        "services": [
+            {
+                "id": 1,
+                "title": "Consultoria estrategica"
+            },
+            {
+                "id": 4,
+                "title": "Desarrollo de productos"
+            }
+        ],
+        "decalogue": {
+            "id": 3,
+            "title": "Generamos propuestas coherentes con nuestro entorno"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Proyecto casa bosques con espacio de trabajo",
+        "customers": {
+            "id": 1,
+            "title": "Casa Bosques"
+        },
+        "topics": [
+            {
+                "id": 4,
+                "title": "Espacio de trabajo"
+            }
+        ],
+        "services": {
+            "id": 5,
+            "title": "Mobiliario"
+        },
+        "decalogue": {
+            "id": 4,
+            "title": "Imprimimos identidad en la cotidianidad"
+        }
+    },
+    {
+        "id": 3,
+        "title": "Proyecto conarte con arte y exhibicion",
+        "customers": {
+            "id": 2,
+            "title": "Conarte"
+        },
+        "topics": [
+            {
+                "id": 5,
+                "title": "Arte y exhibicion"
+            }
+        ],
+        "services": [
+            {
+                "id": 2,
+                "title": "Edicion"
+            },
+            {
+                "id": 3,
+                "title": "Diseño de experiencias"
+            },
+            {
+                "id": 6,
+                "title": "Investigacion y tendencias"
+            }
+        ],
+        "decalogue": {
+            "id": 5,
+            "title": "Contamos historias sobre el tiempo en que vivimos"
+        }
+    },
+    {
+        "id": 4,
+        "title": "Proyecto concreteworks con arte y exhibicion",
+        "customers": {
+            "id": 3,
+            "title": "Concreteworks"
+        },
+        "topics": [
+            {
+                "id": 5,
+                "title": "Arte y exhibicion"
+            }
+        ],
+        "services": [
+            {
+                "id": 2,
+                "title": "Edicion"
+            },
+            {
+                "id": 3,
+                "title": "Diseño de experiencias"
+            }
+        ],
+        "decalogue": {
+            "id": 8,
+            "title": "Añadimos valor a nuestras capacidades productivas"
+        }
+    },
+    {
+        "id": 5,
+        "title": "Proyecto decimal con residencial 1",
+        "customers": {
+            "id": 4,
+            "title": "Decimal"
+        },
+        "topics": [
+            {
+                "id": 3,
+                "title": "Residencial"
+            }
+        ],
+        "services": [
+            {
+                "id": 5,
+                "title": "Mobiliario"
+            },
+            {
+                "id": 1,
+                "title": "Consultoria estrategica"
+            }
+        ],
+        "decalogue": {
+            "id": 1,
+            "title": "Curamos, difundimos y creamos conexiones"
+        }
+    },
+    {
+        "id": 6,
+        "title": "Proyecto decimal con residencial 2",
+        "customers": {
+            "id": 4,
+            "title": "Decimal"
+        },
+        "topics": [
+            {
+                "id": 3,
+                "title": "Residencial"
+            }
+        ],
+        "services": {
+            "id": 5,
+            "title": "Mobiliario"
+        },
+        "decalogue": {
+            "id": 2,
+            "title": "Trabajamos desde un contexto local creativo"
+        }
+    },
+    {
+        "id": 7,
+        "title": "Proyecto distrito tec con educacion",
+        "customers": {
+            "id": 5,
+            "title": "Distrito Tec"
+        },
+        "topics": [
+            {
+                "id": 1,
+                "title": "Educacion"
+            }
+        ],
+        "services": [
+            {
+                "id": 6,
+                "title": "Investigacion y tendencias"
+            },
+            {
+                "id": 3,
+                "title": "Diseño de experiencias"
+            }
+        ],
+        "decalogue": {
+            "id": 9,
+            "title": "Impulsamos la cultura del diseño en Mexico"
+        }
+    }
+]

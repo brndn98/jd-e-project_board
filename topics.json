@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Educacion"
+    },
+    {
+        "id": 2,
+        "title": "Retail"
+    },
+    {
+        "id": 3,
+        "title": "Residencial"
+    },
+    {
+        "id": 4,
+        "title": "Espacio de trabajo"
+    },
+    {
+        "id": 5,
+        "title": "Arte y exhibicion"
+    },
+    {
+        "id": 6,
+        "title": "Impacto social"
+    }
+]

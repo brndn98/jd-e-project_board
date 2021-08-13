@@ -1,0 +1,120 @@
+body {
+    margin: 25px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1c1c1c;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.select-container {
+    width: 90%;
+    display: flex;
+    margin-bottom: 24px;
+}
+.select-container > select {
+    width: 20%;
+    height: 25px;
+    margin: 5px;
+}
+
+.board-container {
+    width: 90%;
+    border: solid 2px #1c1c1c;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.board-row {
+    width: fit-content;
+    display: flex;
+    /* flex-wrap: nowrap; */
+}
+
+.board-header {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #dbdbdb;
+}
+
+.board-cell {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    font-weight: 500;
+    border: solid 1px #1c1c1c;
+    margin: 5px;
+}
+/* .board-cell:hover {
+    background-color: #1c1c1c;
+    color: #dbdbdb;
+} */
+
+.no-cell {
+    width: 200px;
+    margin: 5px;
+    border: unset;
+}
+
+.cell-project {
+    position: absolute;
+    width: 96%;
+    height: 92%;
+    padding: 2%;
+    top: 0;
+    background-color: #dbdbdb;
+}
+.cell-project:hover {
+    background-color: #1c1c1c;
+    color: #dbdbdb;
+}
+
+.cell-counter {
+    /* width: 30px;
+    height: 25px; */
+    position: absolute;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    padding: 2px 5px;
+    bottom: 2%;
+    right: 2%;
+    background-color: #1c1c1c;
+    color: #ccc;
+    border-radius: 50px;
+    z-index: 101;
+}
+
+.row-projects > .board-header {
+    height: 100px;
+}
+
+.active-project {
+    z-index: 100;
+}
+
+.projects-container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.projects-container > h1 {
+    width: 100%;
+}
+.project-container {
+    width: 40%;
+    padding: 10px 20px;
+    background-color: #dbdbdb;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
