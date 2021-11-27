@@ -1,6 +1,6 @@
 body {
     margin: 25px 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: #1c1c1c;
 }
 
@@ -52,13 +52,8 @@ body {
     width: 200px;
     height: 100px;
     font-weight: 500;
-    border: solid 1px #1c1c1c;
     margin: 5px;
 }
-/* .board-cell:hover {
-    background-color: #1c1c1c;
-    color: #dbdbdb;
-} */
 
 .no-cell {
     width: 200px;
@@ -80,8 +75,6 @@ body {
 }
 
 .cell-counter {
-    /* width: 30px;
-    height: 25px; */
     position: absolute;
     font-size: 14px;
     font-weight: 700;
