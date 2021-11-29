@@ -11,13 +11,18 @@ body {
     align-items: center;
 }
 
-.select-container {
+.filters-container {
     width: 90%;
     display: flex;
     margin-bottom: 24px;
 }
-.select-container > select {
-    width: 20%;
+.filters-container > .board-select {
+    width: 15%;
+    height: 25px;
+    margin: 5px;
+}
+.filters-container > .board-submit {
+    width: 8%;
     height: 25px;
     margin: 5px;
 }
@@ -27,6 +32,10 @@ body {
     border: solid 2px #1c1c1c;
     overflow-x: auto;
     padding: 10px;
+    transition: opacity 0.2s ease-in-out;
+}
+.board-container-loading-mask {
+    opacity: 0.5;
 }
 
 .board-row {

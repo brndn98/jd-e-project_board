@@ -12,22 +12,35 @@ window.addEventListener("load", function () {
 
     function initBoard(projects) {
         var boardSelects = document.querySelectorAll(".board-select");
+        var boardSubmit = document.querySelector(".board-submit");
 
-        boardSelects.forEach((select) => {
+        boardSelects.forEach((select, sIndex) => {
             select.addEventListener("change", function () {
-                getBoardFilters(projects);
+                toggleBoardFilters(boardSelects, sIndex, select.selectedIndex);
             });
         });
 
-        getBoardFilters(projects);
+        boardSubmit.addEventListener("click", function (event) {
+            event.preventDefault();
+            setBoardFilters(projects);
+        });
+
+        setBoardFilters(projects);
     }
 
-    function getBoardFilters(projects) {
-        var boardContainer = document.querySelector("#board-container");
-        var columnsSelect = document.querySelector("#select-columns");
-        var rowsSelect = document.querySelector("#select-rows");
+    function toggleBoardFilters(filters, current, selected) {
+        filters.forEach((filter, fIndex) => {
+            if (fIndex != current) {
+                for (var i = 0; i < filter.options.length; i++) {
+                    filter.options[i].disabled = i == selected;
+                }
+            }
+        });
+    }
 
-        boardContainer.innerHTML = "";
+    function setBoardFilters(projects) {
+        var columnsSelect = document.querySelector("#filter-columns");
+        var rowsSelect = document.querySelector("#filter-rows");
 
         // get selected board filters
         var columnsFilter = columnsSelect.value;
@@ -37,27 +50,31 @@ window.addEventListener("load", function () {
     }
 
     function fetchFilters(columns, rows, projects) {
-        var boardSelects = document.querySelectorAll(".board-select");
-        boardSelects.forEach((select) => {
-            select.disabled = true;
-        });
+        var boardContainer = document.querySelector("#board-container");
+        var boardSubmit = document.querySelector(".board-submit");
+        boardContainer.className += " board-container-loading-mask";
+        boardSubmit.disabled = true;
 
-        Promise.all([fetch("../data/" + columns + ".json"), fetch("../data/" + rows + ".json")])
-            .then((responses) => {
-                return Promise.all(responses.map((response) => response.json()));
-            })
-            .then((data) => {
-                boardSelects.forEach((select) => {
-                    select.disabled = false;
-                });
+        setTimeout(function () {
+            Promise.all([fetch("../data/" + columns + ".json"), fetch("../data/" + rows + ".json")])
+                .then((responses) => {
+                    return Promise.all(responses.map((response) => response.json()));
+                })
+                .then((data) => {
+                    boardContainer.className = boardContainer.className.replace(" board-container-loading-mask", "");
+                    boardSubmit.disabled = false;
 
-                setBoard(data[0], data[1], projects, { col: columns, row: rows });
-            })
-            .catch((error) => console.log(error));
+                    if (columns == "years") data[0].sort((a, b) => parseInt(b.title, 10) - parseInt(a.title, 10));
+                    if (rows == "years") data[1].sort((c, d) => parseInt(d.title, 10) - parseInt(c.title, 10));
+                    setBoard(data[0], data[1], projects, { col: columns, row: rows });
+                })
+                .catch((error) => console.log(error));
+        }, 500);
     }
 
     function setBoard(columns, rows, projects, filters) {
         var boardContainer = document.querySelector("#board-container");
+        boardContainer.innerHTML = "";
 
         var columnsHeader = getBoardRow(false);
         columns.forEach((column) => {

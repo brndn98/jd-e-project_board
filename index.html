@@ -9,21 +9,22 @@
 </head>
 <body>
     <div class="container">
-        <div class="select-container">
-            <select id="select-columns" class="board-select">
+        <div class="filters-container">
+            <select id="filter-columns" class="board-select">
                 <option value="topics" selected>Temas</option>
                 <option value="services">Servicios</option>
                 <option value="customers">Clientes</option>
-                <option value="year" disabled>Años</option>
+                <option value="years">Linea de tiempo</option>
                 <option value="decalogue">Decalogo</option>
             </select>
-            <select id="select-rows" class="board-select">
+            <select id="filter-rows" class="board-select">
                 <option value="topics">Temas</option>
                 <option value="services">Servicios</option>
                 <option value="customers" selected>Clientes</option>
-                <option value="year" disabled>Años</option>
+                <option value="years">Linea de tiempo</option>
                 <option value="decalogue">Decalogo</option>
             </select>
+            <button id="filter-submit" class="board-submit">Buscar</button>
         </div>
         <div class="board-container" id="board-container"></div>
     </div>
