@@ -9,24 +9,26 @@
 </head>
 <body>
     <div class="container">
-        <div class="filters-container">
-            <select id="filter-columns" class="board-select">
-                <option value="topics" selected>Temas</option>
-                <option value="services">Servicios</option>
-                <option value="customers">Clientes</option>
-                <option value="years">Linea de tiempo</option>
-                <option value="decalogue">Decalogo</option>
-            </select>
-            <select id="filter-rows" class="board-select">
-                <option value="topics">Temas</option>
-                <option value="services">Servicios</option>
-                <option value="customers" selected>Clientes</option>
-                <option value="years">Linea de tiempo</option>
-                <option value="decalogue">Decalogo</option>
-            </select>
-            <button id="filter-submit" class="board-submit">Buscar</button>
+        <div class="content-board-component">
+            <div class="filters-container">
+                <select id="filter-columns" class="board-select">
+                    <option value="topics">Temas</option>
+                    <option value="services" disabled>Servicios</option>
+                    <option value="customers">Clientes</option>
+                    <option value="years" selected>Linea de tiempo</option>
+                    <option value="decalogue">Decalogo</option>
+                </select>
+                <select id="filter-rows" class="board-select">
+                    <option value="topics">Temas</option>
+                    <option value="services" selected>Servicios</option>
+                    <option value="customers">Clientes</option>
+                    <option value="years" disabled>Linea de tiempo</option>
+                    <option value="decalogue">Decalogo</option>
+                </select>
+                <button id="filter-submit" class="board-submit">Buscar</button>
+            </div>
+            <div class="board-container" id="board-container"></div>
         </div>
-        <div class="board-container" id="board-container"></div>
     </div>
 
     <script src="./js/posts-board.js"></script>

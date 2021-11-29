@@ -83,10 +83,10 @@ window.addEventListener("load", function () {
         });
         boardContainer.appendChild(columnsHeader);
 
-        rows.forEach((row, rIndex) => {
+        rows.forEach((row) => {
             var currentRow = getBoardRow(row.title);
 
-            columns.forEach((col, cIndex) => {
+            columns.forEach((col) => {
                 var matchProjects = projects.filter((project) => {
                     var colArray = Array.isArray(project[filters.col]) ? project[filters.col] : [project[filters.col]];
                     var rowArray = Array.isArray(project[filters.row]) ? project[filters.row] : [project[filters.row]];
@@ -116,7 +116,7 @@ window.addEventListener("load", function () {
 
     function getBoardCell(data, isHeader) {
         var cell = document.createElement("div");
-        cell.className = isHeader ? "board-header" : "board-cell";
+        cell.className = isHeader ? "board-cell board-header" : "board-cell board-content";
         if (data) {
             if (isHeader) {
                 var headerTitle = document.createElement("h2");
@@ -124,42 +124,32 @@ window.addEventListener("load", function () {
                 headerTitle.appendChild(headerText);
                 cell.appendChild(headerTitle);
             } else {
-                data.forEach((project, pIndex) => {
+                var defaultZIndex = 100;
+                data.forEach((project) => {
                     var cellProject = document.createElement("div");
-                    cellProject.className = pIndex == 0 ? "cell-project active-project" : "cell-project";
-                    var projectTitle = document.createElement("p");
+                    cellProject.className = data.length > 1 ? "cell-multiproject" : "cell-project";
+                    cellProject.style.zIndex = defaultZIndex--;
+                    // * dev only
+                    var projectImage = document.createElement("img");
+                    projectImage.setAttribute("src", "../images/placeholder.png");
+                    cellProject.appendChild(projectImage);
+                    /* var projectTitle = document.createElement("p");
                     var titleText = document.createTextNode(project.title);
                     projectTitle.appendChild(titleText);
-                    cellProject.appendChild(projectTitle);
+                    cellProject.appendChild(projectTitle); */
 
                     cell.appendChild(cellProject);
                 });
-                var projectCounter = document.createElement("div");
-                projectCounter.className = "cell-counter";
-                projectCounter.textContent = "1/" + data.length;
-
-                cell.appendChild(projectCounter);
-
-                // * EXAMPLE ONLY
                 if (data.length > 1) {
-                    cell.setAttribute("data-project-index", "0");
-                    cell.addEventListener("click", function () {
-                        var projectIndex = parseInt(cell.getAttribute("data-project-index"));
-                        var currentProject = cell.querySelector(".active-project");
-                        var cellCounter = cell.querySelector(".cell-counter");
-                        var totalProjects = cell.querySelectorAll(".cell-project").length;
+                    var projectCounter = document.createElement("div");
+                    projectCounter.className = "cell-counter";
+                    projectCounter.textContent = data.length;
 
-                        projectIndex++;
-                        if (projectIndex >= totalProjects) projectIndex = 0;
-                        currentProject.className = currentProject.className.replace(" active-project", "");
-                        cell.children[projectIndex].className += " active-project";
-                        cellCounter.textContent = projectIndex + 1 + "/" + totalProjects;
-                        cell.setAttribute("data-project-index", "" + projectIndex);
-                    });
+                    cell.appendChild(projectCounter);
                 }
             }
         } else {
-            cell.className += " no-cell";
+            cell.className += " empty-cell";
         }
 
         return cell;
