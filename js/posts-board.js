@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
             #url : endpoint en donde se hace la peticion
             return => respuesta resuelta con la informacion solicitada / error
         */
-        fetch("../data/projects.json")
+        fetch("./data/projects.json")
             .then((response) => response.json())
             .then((data) => {
                 // con la informacion de los proyectos se inicia el tablero
@@ -91,7 +91,7 @@ window.addEventListener("load", function () {
                 #url : endpoint en donde se hace la peticion
                 return => lista de respuestas resueltas con la informacion solicitada / error
             */
-            Promise.all([fetch("../data/" + columns + ".json"), fetch("../data/" + rows + ".json")])
+            Promise.all([fetch("./data/" + columns + ".json"), fetch("./data/" + rows + ".json")])
                 .then((responses) => {
                     return Promise.all(responses.map((response) => response.json()));
                 })
@@ -199,7 +199,7 @@ window.addEventListener("load", function () {
                     cellProject.className = data.length > 1 ? "cell-multiproject" : "cell-project";
                     cellProject.style.zIndex = defaultZIndex--;
                     var projectImage = document.createElement("img");
-                    projectImage.setAttribute("src", "../images/placeholder.png"); // * dev only
+                    projectImage.setAttribute("src", "./images/placeholder.png"); // * dev only
                     cellProject.appendChild(projectImage);
 
                     cell.appendChild(cellProject);
