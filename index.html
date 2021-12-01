@@ -4,82 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JD-E Board</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>JDE Board</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="container">
-        <div class="select-container">
-            <select id="select-columns" class="board-select">
-                <option value="topics" selected>Temas</option>
-                <option value="services">Servicios</option>
-                <option value="customers">Clientes</option>
-                <option value="year" disabled>Años</option>
-                <option value="decalogue">Decalogo</option>
-            </select>
-            <select id="select-rows" class="board-select">
-                <option value="topics">Temas</option>
-                <option value="services">Servicios</option>
-                <option value="customers" selected>Clientes</option>
-                <option value="year" disabled>Años</option>
-                <option value="decalogue">Decalogo</option>
-            </select>
-        </div>
-        <div class="board-container" id="board-container">
-            <div class="board-row header-column">
-                <div class="no-cell">(esto es un placeholder)</div>
-                <div class="board-header"><h2>Educacion</h2></div>
-                <div class="board-header"><h2>Retail</h2></div>
-                <div class="board-header"><h2>Residencial</h2></div>
-                <div class="board-header"><h2>Espacio de trabajo</h2></div>
-                <div class="board-header"><h2>Arte y exhibicion</h2></div>
-                <div class="board-header"><h2>Impacto social</h2></div>
+        <div class="content-board-component">
+            <div class="filters-container">
+                <select id="filter-columns" class="board-select">
+                    <option value="topics">Temas</option>
+                    <option value="services" disabled>Servicios</option>
+                    <option value="customers">Clientes</option>
+                    <option value="years" selected>Linea de tiempo</option>
+                    <option value="decalogue">Decalogo</option>
+                </select>
+                <select id="filter-rows" class="board-select">
+                    <option value="topics">Temas</option>
+                    <option value="services" selected>Servicios</option>
+                    <option value="customers">Clientes</option>
+                    <option value="years" disabled>Linea de tiempo</option>
+                    <option value="decalogue">Decalogo</option>
+                </select>
+                <button id="filter-submit" class="board-submit">Buscar</button>
             </div>
-            <div class="board-row row-projects">
-                <div class="board-header"><h2>Casa Bosques</h2></div>
-                <div class="board-cell">
-                    <div class="cell-project">
-                        <p class="project-title">Nombre de proyecto solo</p>
-                    </div>
-                    <div class="cell-counter">1</div>
-                </div>
-                <div class="board-cell no-cell"></div>
-                <div class="board-cell no-cell"></div>
-                <div class="board-cell">
-                    <div class="cell-project">
-                        <p class="project-title">Nombre de proyecto 1</p>
-                    </div>
-                    <div class="cell-project">
-                        <p class="project-title">Nombre de proyecto 2</p>
-                    </div>
-                    <div class="cell-project">
-                        <p class="project-title">Nombre de proyecto 3</p>
-                    </div>
-                    <div class="cell-counter">3</div>
-                </div>
-                <div class="board-cell no-cell"></div>
-                <div class="board-cell no-cell"></div>
-            </div>
-            <div class="board-row row-projects">
-                <div class="board-header"><h2>Conarte</h2></div>
-                <div class="board-cell no-cell"></div>
-                <div class="board-cell no-cell"></div>
-                <div class="board-cell no-cell"></div>
-                <div class="board-cell no-cell"></div>
-                <div class="board-cell">
-                    <div class="cell-project">
-                        <p class="project-title">Nombre de proyecto</p>
-                    </div>
-                    <div class="cell-counter">1</div>
-                </div>
-                <div class="board-cell no-cell"></div>
-            </div>
-        </div>
-        <div class="projects-container">
-            <h1>Lista de proyectos:</h1>
+            <div class="board-container" id="board-container"></div>
         </div>
     </div>
 
-    <script src="./posts-board.js"></script>
+    <script src="./js/posts-board.js"></script>
 </body>
 </html>

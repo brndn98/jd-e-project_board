@@ -1,0 +1,134 @@
+body {
+    margin: 25px 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #1c1c1c;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.content-board-component {
+    width: 90% !important; /* reemplazable */
+}
+
+.filters-container {
+    width: 100%;
+    display: flex;
+    margin-bottom: 24px;
+}
+.filters-container > .board-select {
+    width: 15%;
+    height: 25px;
+    margin: 5px;
+}
+.filters-container > .board-submit {
+    width: 8%;
+    height: 25px;
+    margin: 5px;
+}
+
+.board-container {
+    width: 100% !important;
+    border: solid 1px #1c1c1c;
+    overflow-x: auto !important;
+    transition: opacity 0.2s ease-in-out; /* opcional */
+}
+.board-container-loading-mask {
+    opacity: 0.5;
+}
+
+.board-row {
+    width: fit-content !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+}
+
+.board-cell {
+    position: relative !important;
+    width: 200px !important; /* reemplazable */
+    border: solid 1px #1c1c1c;
+}
+.board-header {
+    min-height: 50px !important; /* reemplazable */
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+.board-content {
+    height: 100px !important; /* reemplazable */
+    font-weight: 500;
+}
+.empty-cell {
+    border: solid 1px #1c1c1c;
+    /* 
+    Deshabilita o define estilos 
+    para las celdas vacias 
+    ...
+    */
+}
+
+.cell-project {
+    position: absolute !important;
+    width: 100% !important; /* reemplazable */
+    height: 100% !important; /* reemplazable */
+    top: 0 !important;
+}
+.cell-multiproject {
+    position: absolute !important;
+    width: 70% !important; /* reemplazable */
+    height: 70% !important; /* reemplazable */
+    font-size: 12px;
+}
+.cell-multiproject:nth-child(1) {
+    right: 0 !important;
+    bottom: 0 !important;
+}
+.cell-multiproject:nth-child(2) {
+    right: 15% !important; /* el valor  es igual a  ( 100(%)  menos  .cell-multiproject->width(%) )  dividido entre  2  */
+    bottom: 15% !important; /* el valor  es igual a  ( 100(%)  menos  .cell-multiproject->height(%) )  dividido entre  2  */
+}
+.cell-multiproject:nth-child(n + 3) {
+    left: 0 !important;
+    top: 0 !important;
+}
+.cell-counter {
+    position: absolute !important;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    padding: 2px 5px;
+    bottom: 2%;
+    right: 2%;
+    background-color: #1c1c1c;
+    color: #ccc;
+    border-radius: 50px;
+    z-index: 101 !important;
+}
+.cell-project,
+.cell-multiproject {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+}
+.cell-project img,
+.cell-multiproject img {
+    width: 100% !important;
+}
+.cell-project:hover,
+.cell-multiproject:hover {
+    filter: brightness(0.7);
+}
+
+.row-projects > .board-header {
+    height: 100px; /* opcional */
+}
+
+.active-project {
+    z-index: 100;
+}

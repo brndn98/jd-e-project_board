@@ -29,6 +29,10 @@
         "decalogue": {
             "id": 3,
             "title": "Generamos propuestas coherentes con nuestro entorno"
+        },
+        "years": {
+            "id": 2,
+            "title": "2018"
         }
     },
     {
@@ -51,6 +55,10 @@
         "decalogue": {
             "id": 4,
             "title": "Imprimimos identidad en la cotidianidad"
+        },
+        "years": {
+            "id": 3,
+            "title": "2019"
         }
     },
     {
@@ -83,6 +91,10 @@
         "decalogue": {
             "id": 5,
             "title": "Contamos historias sobre el tiempo en que vivimos"
+        },
+        "years": {
+            "id": 4,
+            "title": "2020"
         }
     },
     {
@@ -111,6 +123,10 @@
         "decalogue": {
             "id": 8,
             "title": "Añadimos valor a nuestras capacidades productivas"
+        },
+        "years": {
+            "id": 4,
+            "title": "2020"
         }
     },
     {
@@ -139,6 +155,10 @@
         "decalogue": {
             "id": 1,
             "title": "Curamos, difundimos y creamos conexiones"
+        },
+        "years": {
+            "id": 4,
+            "title": "2020"
         }
     },
     {
@@ -161,6 +181,10 @@
         "decalogue": {
             "id": 2,
             "title": "Trabajamos desde un contexto local creativo"
+        },
+        "years": {
+            "id": 5,
+            "title": "2021"
         }
     },
     {
@@ -189,6 +213,74 @@
         "decalogue": {
             "id": 9,
             "title": "Impulsamos la cultura del diseño en Mexico"
+        },
+        "years": {
+            "id": 5,
+            "title": "2021"
+        }
+    },
+    {
+        "id": 8,
+        "title": "Proyecto filler conarte 2020 edicion",
+        "customers": {
+            "id": 2,
+            "title": "Conarte"
+        },
+        "topics": [
+            {
+                "id": 5,
+                "title": "Arte y exhibicion"
+            }
+        ],
+        "services": [
+            {
+                "id": 2,
+                "title": "Edicion"
+            },
+            {
+                "id": 6,
+                "title": "Investigacion y tendencias"
+            }
+        ],
+        "decalogue": {
+            "id": 5,
+            "title": "Contamos historias sobre el tiempo en que vivimos"
+        },
+        "years": {
+            "id": 4,
+            "title": "2020"
+        }
+    },
+    {
+        "id": 9,
+        "title": "Proyecto filler concreteworks 2020 edicion",
+        "customers": {
+            "id": 3,
+            "title": "Concreteworks"
+        },
+        "topics": [
+            {
+                "id": 5,
+                "title": "Arte y exhibicion"
+            }
+        ],
+        "services": [
+            {
+                "id": 2,
+                "title": "Edicion"
+            },
+            {
+                "id": 3,
+                "title": "Diseño de experiencias"
+            }
+        ],
+        "decalogue": {
+            "id": 8,
+            "title": "Añadimos valor a nuestras capacidades productivas"
+        },
+        "years": {
+            "id": 4,
+            "title": "2020"
         }
     }
 ]
