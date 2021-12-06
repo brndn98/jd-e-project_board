@@ -6,31 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JDE Board</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css" integrity="sha512-d0v474klOFSF7qD9WDvyRxAvXaWSxCHDZdnBSZQjo8BpVr6vpjwAgqetpqkKP38DzlOzdVPaLVnzzW1Ba8wB9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <div class="content-board-component">
-            <div class="filters-container">
-                <select id="filter-columns" class="board-select">
+    <div class="ph5-l ph4-m ph3 mt5 overflow-hidden mw9 center">
+        <h1 class="ma0 red ttu w-60-l w-75-m f1-l f2 lh-title">Explora nuestros proyectos por categorías</h1>
+        <div class="mt5 mw6-l flex flex-nowrap-ns flex-row-ns flex-column nr2 nl2">
+            <div class="select-wrapper flex-grow-1 w-auto-l ph2 mt0-ns mt3">
+                <select id="filter-columns" class="w-100 bg-red white bn pa3 pr4 f7 ttu pointer dim">
                     <option value="topics">Temas</option>
                     <option value="services" disabled>Servicios</option>
                     <option value="customers">Clientes</option>
                     <option value="years" selected>Linea de tiempo</option>
                     <option value="decalogue">Decalogo</option>
                 </select>
-                <select id="filter-rows" class="board-select">
+            </div>
+            <div class="select-wrapper flex-grow-1 w-auto-l ph2 mt0-ns mt3">
+                <select id="filter-rows" class="w-100 bg-red white bn pa3 pr4 f7 ttu pointer dim">
                     <option value="topics">Temas</option>
                     <option value="services" selected>Servicios</option>
                     <option value="customers">Clientes</option>
                     <option value="years" disabled>Linea de tiempo</option>
                     <option value="decalogue">Decalogo</option>
                 </select>
-                <button id="filter-submit" class="board-submit">Buscar</button>
             </div>
-            <div class="board-container" id="board-container"></div>
+            <div class="w-auto-l w4 ph2 mt0-ns mt3 self-end">
+                <button id="filter-submit" class="board-submit bg-white red ba b--red bw1 br-pill pa3 f7 ttu pointer dim flex items-center justify-between w-100">
+                    <span class="mr3">Buscar</span>
+                    <span class="f5">→</span>
+                </button>
+            </div>
         </div>
+        <div class="board-container mv5" id="board-container"></div>
     </div>
-
     <script src="./js/posts-board.js"></script>
 </body>
 </html>
