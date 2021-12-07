@@ -107,11 +107,11 @@ select {
     z-index: 102;
 }
 
-@media screen and (max-width: 300px) {
+@media (max-width: 30em) {
     .board-header {
-        position: static;
+      position: static !important;
     }
-}
+  }
 
 .row-projects > .board-header:after {
     content: "";
@@ -158,7 +158,7 @@ select {
 
 .cell-multiproject:nth-child(2) {
     right: 15% !important; /* el valor  es igual a  ( 100(%)  menos  .cell-multiproject->width(%) )  dividido entre  2  */
-    bottom: 15% !important; /* el valor  es igual a  ( 100(%)  menos  .cell-multiproject->height(%) )  dividido entre  2  */
+    bottom: 15% !important; /* el valor  es igual a  ( 100(%)  menos  .cell-multiproject->height(%) )  dividido entre  2  */    
 }
 
 .cell-multiproject:nth-child(n + 3) {
