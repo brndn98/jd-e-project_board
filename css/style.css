@@ -116,11 +116,11 @@ select {
 .row-projects > .board-header:after {
     content: "";
     background:white;
-    height: 3px;
+    height: calc(2rem + 2px);
     width: 100%;
     display: block;
     position: absolute;
-    bottom: calc(-1rem - 1px);
+    bottom: calc(-2rem - 2px);
 }
 
 .board-content {
@@ -135,6 +135,145 @@ select {
     para las celdas vacias 
     ...
     */
+}
+
+.cell-detail {
+    position: absolute !important;
+    width: 32rem;
+    color: white;
+    padding: 2rem 1rem;
+    right: -33rem;
+    background-position: center;
+    background-size: cover;
+    filter: saturate(.7);
+}
+
+.cell-detail > h2 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cell-detail > p {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%;
+    max-width: 24em;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.cell-detail > ul.cell-detail-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.cell-detail > ul.cell-detail-links li:not(:last-child) {
+    margin-right: .5rem;
+}
+
+.cell-detail > ul.cell-detail-links li:not(:last-child)::after {
+    margin-left: .5rem;
+    content: "|"
+}
+
+.cell-detail > ul.cell-detail-links a {
+    color: white;
+    text-decoration: underline;
+    transition: opacity .15s ease-in;
+}
+
+.cell-detail > ul.cell-detail-links a:hover {
+    opacity: .5;
+}
+
+.cell-detail > ul.cell-detail-bullets {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.cell-detail > ul.cell-detail-bullets {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 3rem
+}
+
+.cell-detail > ul.cell-detail-bullets li > a {
+    width: .75rem;
+    height: .75rem;
+    border-radius: 100%;
+    background: white;
+    display: block;
+    cursor: pointer;
+    transition: opacity .15s ease-in;
+}
+
+.cell-detail > ul.cell-detail-bullets li > a.active {
+    background: black;
+}
+
+.cell-detail > ul.cell-detail-bullets li > a:hover {
+    opacity: .5;
+}
+
+.cell-detail > ul.cell-detail-bullets li:not(:last-child) {
+    margin-right: .5rem;
+}
+
+.cell-detail > ul.cell-detail-bullets a.next-bullet {
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    color: black;
+    border-radius: 100%;
+    margin-left: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: opacity .15s ease-in;
+}
+
+.cell-detail > ul.cell-detail-bullets a.next-bullet:hover {
+    opacity: .5;
+}
+
+.cell-detail > ul.cell-detail-bullets a.next-bullet::after {
+    content: "→";
+}
+
+.cell-detail > a.close-button {
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: opacity .15s ease-in;
+}
+
+.cell-detail > a.close-button:hover {
+    opacity: .5;
+}
+
+.cell-detail > a.close-button::after {
+    content: "x";
 }
 
 .cell-project {
