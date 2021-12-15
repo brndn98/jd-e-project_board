@@ -175,19 +175,19 @@
 
         // Este es un acercamiento burdo a una solución para la altura de las filas y que sean dinámicas con la altura del detalle del proyecto.
 
-        // Identificamos el cell-detail
+        // Identificamos el cell-detail.
         var cellDetail = document.getElementById('cell-detail');
 
-        // Obtenemos su altura
+        // Obtenemos su altura.
         var cellHeight = cellDetail.clientHeight;
 
-        // Identificamos la row a la que pertence
+        // Identificamos la row a la que pertence.
         var currentRow = cellDetail.parentElement.parentElement;
         
-        // Le asignamos la altura de nuestro cell-detail + 32px (que es el valor de padding que tienen todas las cells)
+        // Le asignamos la altura de nuestro cell-detail + 32px (que es el valor de padding que tienen todas las cells).
         currentRow.style.height = `${cellHeight + 32}px`;
 
-        // A la row que le pertenece el cell-detail activado le tenemos que asignar la altura de 100%;
+        // Al primer ".board-header" de la ".board-row" a la que le pertenece el ".cell-detail" activado le tenemos que asignar un height de 100%, si no, rompe el diseño.
         let boardHeader = currentRow.querySelector('.board-header');
         boardHeader.style.height = "100%"
 
