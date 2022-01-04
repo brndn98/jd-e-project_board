@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDE Board</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css" integrity="sha512-d0v474klOFSF7qD9WDvyRxAvXaWSxCHDZdnBSZQjo8BpVr6vpjwAgqetpqkKP38DzlOzdVPaLVnzzW1Ba8wB9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="ph5-l ph4-m ph3 mt5 overflow-hidden mw9 center">
+        <h1 class="ma0 red ttu w-60-l w-75-m f1-l f2 lh-title">Explora nuestros proyectos por categorías</h1>
+        <div class="mt5-ns mt4 mw6-l flex flex-column nr2 nl2">
+            <div class="select-wrapper flex-grow-1 w-auto-l ph2 mt3">
+                <select id="filter-clients" class="w-100 bg-red white bn pa3 pr4 f7 ttu pointer dim">
+                    <option disabled selected value default>Seleccionar Cliente</option>
+                    <option value="tane">Tane</option>
+                    <option value="distrito-tec">Distrito Tec</option>
+                    <option value="studio-edition">Studio Edition</option>
+                    <option value="tempo">Tempo</option>
+                    <option value="libbey">Libbey</option>
+                    <option value="quadro">Quadro</option>
+                </select>
+            </div>
+            <div class="select-wrapper flex-grow-1 w-auto-l ph2 mt3">
+                <select id="filter-clients" class="w-100 bg-red white bn pa3 pr4 f7 ttu pointer dim">
+                    <option disabled selected value default>Seleccionar Tema</option>
+                    <option value="tane">Medicina</option>
+                    <option value="distrito-tec">Urbanismo</option>
+                    <option value="studio-edition">Cultura</option>
+                    <option value="tempo">Inclusión</option>
+                </select>
+            </div>
+            <div class="select-wrapper flex-grow-1 w-auto-l ph2 mt3">
+                <select id="filter-clients" class="w-100 bg-red white bn pa3 pr4 f7 ttu pointer dim">
+                    <option disabled selected value default>Seleccionar Servicios</option>
+                    <option value="tane">Arquitectura</option>
+                    <option value="distrito-tec">Diseño Industrial</option>
+                    <option value="studio-edition">Interiorismo</option>
+                    <option value="tempo">Diseño Gráfico</option>
+                </select>
+            </div>
+            
+            <div class="w-auto-l w4 ph2 mt3 self-end">
+                <button id="filter-submit" class="board-submit bg-white red ba b--red bw1 br-pill pa3 f7 ttu pointer dim flex items-center justify-between w-100">
+                    <span class="mr3">Buscar</span>
+                    <span class="f5">→</span>
+                </button>
+            </div>
+        </div>
+        <div class="flex flex-column pb5">
+            <article class="flex flex-column mt4">
+                <h3 class="ttu red f5 mt3 mb0">Galeana</h3>  
+                <img class="db mt3" src="./images/placeholder.png">
+                <div class="flex items-baseline justify-between">
+                    <ul class="flex flex-wrap pa0 mt2 mb0 list">
+                        <li class="mr2 mt2 f7"><a class="no-underline red ttu" href="#">#2021</a></li>
+                        <li class="mr2 mt2 f7"><a class="no-underline red ttu" href="#">#Urbanismo</a></li>
+                        <li class="mr2 mt2 f7"><a class="no-underline red ttu" href="#">#diseño industrial</a></li>
+                    </ul>
+                    <a class="ttu red f6 no-underline b w3 tr flex-shrink-0" href="">Ver →</a>
+                </div> 
+            </article>
+            <article class="flex flex-column mt4">
+                <h3 class="ttu red f5 mt3 mb0">Bolt</h3>  
+                <img class="db mt3" src="./images/placeholder.png">
+                <div class="flex items-baseline justify-between">
+                    <ul class="flex flex-wrap pa0 mt2 mb0 list">
+                        <li class="mr2 mt2 f7"><a class="no-underline red ttu" href="#">#2021</a></li>
+                        <li class="mr2 mt2 f7"><a class="no-underline red ttu" href="#">#Urbanismo</a></li>
+                        <li class="mr2 mt2 f7"><a class="no-underline red ttu" href="#">#Distrito Tec</a></li>
+                        <li class="mr2 mt2 f7"><a class="no-underline red ttu" href="#">#diseño industrial</a></li>
+                    </ul>
+                    <a class="ttu red f6 no-underline b w3 tr flex-shrink-0" href="">Ver →</a>
+                </div> 
+            </article>
+            <article class="flex flex-column mt4">
+                <h3 class="ttu red f5 mt3 mb0">Bolt</h3>  
+                <img class="db mt3" src="./images/placeholder.png">
+                <div class="flex items-baseline justify-between">
+                    <ul class="flex flex-wrap pa0 mt2 mb0 list">
+                        <li class="mr2 mt2 f7"><a class="no-underline red ttu" href="#">#2021</a></li>
+                        <li class="mr2 mt2 f7"><a class="no-underline red ttu" href="#">#Joyería</a></li>
+                        <li class="mr2 mt2 f7"><a class="no-underline red ttu" href="#">#Tane</a></li>
+                        <li class="mr2 mt2 f7"><a class="no-underline red ttu" href="#">#diseño industrial</a></li>
+                    </ul>
+                    <a class="ttu red f6 no-underline b w3 tr flex-shrink-0" href="">Ver →</a>
+                </div> 
+            </article>
+        </div>
+    </div>
+   
+</body>
+</html>

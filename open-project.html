@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDE Board</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css" integrity="sha512-d0v474klOFSF7qD9WDvyRxAvXaWSxCHDZdnBSZQjo8BpVr6vpjwAgqetpqkKP38DzlOzdVPaLVnzzW1Ba8wB9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="ph5-l ph4-m ph3 mt5 overflow-hidden mw9 center">
+        <h1 class="ma0 red ttu w-60-l w-75-m f1-l f2 lh-title">Explora nuestros proyectos por categorías</h1>
+        <div class="mt5 mw6-l flex flex-nowrap-ns flex-row-ns flex-column nr2 nl2">
+            <div class="select-wrapper flex-grow-1 w-auto-l ph2 mt0-ns mt3">
+                <select id="filter-columns" class="w-100 bg-red white bn pa3 pr4 f7 ttu pointer dim">
+                    <option value="topics">Temas</option>
+                    <option value="services" disabled>Servicios</option>
+                    <option value="customers">Clientes</option>
+                    <option value="years" selected>Linea de tiempo</option>
+                    <option value="decalogue">Decalogo</option>
+                </select>
+            </div>
+            <div class="select-wrapper flex-grow-1 w-auto-l ph2 mt0-ns mt3">
+                <select id="filter-rows" class="w-100 bg-red white bn pa3 pr4 f7 ttu pointer dim">
+                    <option value="topics">Temas</option>
+                    <option value="services" selected>Servicios</option>
+                    <option value="customers">Clientes</option>
+                    <option value="years" disabled>Linea de tiempo</option>
+                    <option value="decalogue">Decalogo</option>
+                </select>
+            </div>
+            <div class="w-auto-l w4 ph2 mt0-ns mt3 self-end">
+                <button id="filter-submit" class="board-submit bg-white red ba b--red bw1 br-pill pa3 f7 ttu pointer dim flex items-center justify-between w-100">
+                    <span class="mr3">Buscar</span>
+                    <span class="f5">→</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="board-container mv5" id="board-container">
+            <div class="board-row header-column">
+               <div class="board-cell board-header empty-cell"></div>
+               <div class="board-cell board-header">
+                  <h2>2021</h2>
+               </div>
+               <div class="board-cell board-header">
+                  <h2>2020</h2>
+               </div>
+               <div class="board-cell board-header">
+                  <h2>2019</h2>
+               </div>
+               <div class="board-cell board-header">
+                  <h2>2018</h2>
+               </div>
+               <div class="board-cell board-header">
+                  <h2>2017</h2>
+               </div>
+            </div>
+            <div class="board-row row-projects" id="cell-detail-row">
+               <div class="board-cell board-header">
+                  <h2>Consultoria estrategica</h2>
+               </div>
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content">
+                <div class="cell-project" style="z-index: 100;"><img src="./images/placeholder.png"></div>
+
+                <div class="cell-detail" style="z-index: 101; background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.1)), url(./images/placeholder.png) no-repeat 100% / 100%" id="cell-detail">
+                    <h2>Galeana</h2>
+                    <p>Galeana es una colección de seis objetos de alabastro que generan un vínculo emocional y regional.</p>
+                    <ul class="cell-detail-links">
+                        <li><a href="\">Studio Project</a></li>
+                        <li><a href="\">2020</a></li>
+                    </ul>
+                    <ul class="cell-detail-bullets">
+                        <li><a href=""></a></li>
+                        <li><a class="active" href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <a class="next-bullet" href=""></a>
+                    </ul>
+                    <a class="close-button" href=""></a>
+                </div>
+
+               </div>
+               
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content">
+                  <div class="cell-project" style="z-index: 100;"><img src="./images/placeholder.png"></div>
+               </div>
+               <div class="board-cell board-content empty-cell"></div>
+            </div>
+            <div class="board-row row-projects">
+               <div class="board-cell board-header">
+                  <h2>Edicion</h2>
+               </div>
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content">
+                  <div class="cell-multiproject" style="z-index: 100;"><img src="./images/placeholder.png"></div>
+                  <div class="cell-multiproject" style="z-index: 99;"><img src="./images/placeholder.png"></div>
+                  <div class="cell-multiproject" style="z-index: 98;"><img src="./images/placeholder.png"></div>
+                  <div class="cell-multiproject" style="z-index: 97;"><img src="./images/placeholder.png"></div>
+                  <div class="cell-counter">4</div>
+               </div>
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content empty-cell"></div>
+            </div>
+            <div class="board-row row-projects">
+               <div class="board-cell board-header">
+                  <h2>Diseño de experiencias</h2>
+               </div>
+               <div class="board-cell board-content">
+                  <div class="cell-project" style="z-index: 100;"><img src="./images/placeholder.png"></div>
+               </div>
+               <div class="board-cell board-content">
+                  <div class="cell-multiproject" style="z-index: 100;"><img src="./images/placeholder.png"></div>
+                  <div class="cell-multiproject" style="z-index: 99;"><img src="./images/placeholder.png"></div>
+                  <div class="cell-multiproject" style="z-index: 98;"><img src="./images/placeholder.png"></div>
+                  <div class="cell-counter">3</div>
+               </div>
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content empty-cell"></div>
+            </div>
+            <div class="board-row row-projects">
+               <div class="board-cell board-header">
+                  <h2>Desarrollo de productos</h2>
+               </div>
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content">
+                  <div class="cell-project" style="z-index: 100;"><img src="./images/placeholder.png"></div>
+               </div>
+               <div class="board-cell board-content empty-cell"></div>
+            </div>
+            <div class="board-row row-projects">
+               <div class="board-cell board-header">
+                  <h2>Mobiliario</h2>
+               </div>
+               <div class="board-cell board-content">
+                  <div class="cell-project" style="z-index: 100;"><img src="./images/placeholder.png"></div>
+               </div>
+               <div class="board-cell board-content">
+                  <div class="cell-project" style="z-index: 100;"><img src="./images/placeholder.png"></div>
+               </div>
+               <div class="board-cell board-content">
+                  <div class="cell-project" style="z-index: 100;"><img src="./images/placeholder.png"></div>
+               </div>
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content empty-cell"></div>
+            </div>
+            <div class="board-row row-projects">
+               <div class="board-cell board-header">
+                  <h2>Investigacion y tendencias</h2>
+               </div>
+               <div class="board-cell board-content">
+                  <div class="cell-project" style="z-index: 100;"><img src="./images/placeholder.png"></div>
+               </div>
+               <div class="board-cell board-content">
+                  <div class="cell-multiproject" style="z-index: 100;"><img src="./images/placeholder.png"></div>
+                  <div class="cell-multiproject" style="z-index: 99;"><img src="./images/placeholder.png"></div>
+                  <div class="cell-counter">2</div>
+               </div>
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content empty-cell"></div>
+               <div class="board-cell board-content empty-cell"></div>
+            </div>
+         </div>
+
+    </div>
+    <script>
+
+        // Este es un acercamiento burdo a una solución para la altura de las filas y que sean dinámicas con la altura del detalle del proyecto.
+
+        // Identificamos el cell-detail.
+        var cellDetail = document.getElementById('cell-detail');
+
+        // Obtenemos su altura.
+        var cellHeight = cellDetail.clientHeight;
+
+        // Identificamos la row a la que pertence.
+        var currentRow = cellDetail.parentElement.parentElement;
+        
+        // Le asignamos la altura de nuestro cell-detail + 32px (que es el valor de padding que tienen todas las cells).
+        currentRow.style.height = `${cellHeight + 32}px`;
+
+        // Al primer ".board-header" de la ".board-row" a la que le pertenece el ".cell-detail" activado le tenemos que asignar un height de 100%, si no, rompe el diseño.
+        let boardHeader = currentRow.querySelector('.board-header');
+        boardHeader.style.height = "100%"
+
+
+    </script>
+</body>
+</html>
